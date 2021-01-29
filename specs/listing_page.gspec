@@ -1,11 +1,14 @@
 # This covers Quandoo Listing Page Visual Testing
 ========================================
 @objects
-    listing_header       xpath         //div[@data-qa='listing-header']
-    breadcrumbs          xpath         //div[@data-qa='breadcrumbs']
-    language_selector    xpath         //div[@data-qa='lang-selector-toggle']
-    log_in               xpath         //div[@data-qa='header-login']
-
+    listing_header                  xpath         //div[@data-qa='listing-header']
+    breadcrumbs                     xpath         //div[@data-qa='breadcrumbs']
+    language_selector               xpath         //div[@data-qa='lang-selector-toggle']
+    log_in                          xpath         //div[@data-qa='header-login']
+    search_restaurants              xpath         //input[@data-qa='search-bar-dining-input']
+    city_selector                   xpath         //input[@data-qa='search-bar-destination-input']
+    footer_logo                     xpath         //div[@class='sc-1jmynk5-0 gNqYxZ']
+    copyrights_text                 xpath         //div[text()='${i18n.copyrights_text}']
 ========================================
 # Validation on desktop resolutions
 @on desktop
@@ -25,6 +28,16 @@
       css font-size is "14px"
       css font-family matches ".*Roboto.*, .*Helvetica.*,.*Arial.*,.*sans-serif.*"
 
+= Find section =
+    search_restaurants:
+      text is "${i18n.find_restaurants.search}"
+      left-of city_selector
 
+      height ~ 43px
+      width 300 to 320px
 
-
+= Footer logo =
+    footer_logo:
+      height ~ 37px
+      width ~ 165px
+      above copyrights_text ~ -37px

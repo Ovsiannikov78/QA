@@ -1,9 +1,9 @@
 @@ table languages
         | locale |
         | en     |
-       # | de     |
+        | de     |
        # | fi     |
-        #| fr     |
+       # | fr     |
        # | hk     |
        # | it     |
         #| nl     |
