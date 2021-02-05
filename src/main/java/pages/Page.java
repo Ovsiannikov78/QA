@@ -2,6 +2,8 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 
+import java.net.URL;
+
 /**
  * Abstract class representation of a Page in the UI. Page object pattern
  */

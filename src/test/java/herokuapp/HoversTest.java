@@ -2,6 +2,7 @@ package herokuapp;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,7 +16,7 @@ public class HoversTest {
 
     @BeforeEach
     public void initPageObjects() {
-        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
         driver = new ChromeDriver();
         hoversPage = new HoversPage(driver);
     }
